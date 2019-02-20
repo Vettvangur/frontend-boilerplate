@@ -1,0 +1,6 @@
+@function rem($value) {
+  @return calc(#{$value}rem / 16);
+}
+@function lh($value) {
+  @return calc(#{$value}rem / 16);
+}

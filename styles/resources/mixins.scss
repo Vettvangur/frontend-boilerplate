@@ -1,0 +1,43 @@
+@mixin heading {
+  color: $color-heading;
+  font-weight: 400;
+}
+
+@mixin heading-semi-bold {
+  color: $color-heading;
+  font-weight: 600;
+}
+
+@mixin h1 {
+  font-size: rem(56);
+  line-height: lh(64);
+  @include heading;
+}
+
+@mixin h2 {
+  font-size: rem(40);
+  line-height: lh(48);
+  @include heading;
+}
+
+@mixin h3 {
+  font-size: rem(32);
+  line-height: lh(40);
+  @include heading;
+}
+
+@mixin h4 {
+  font-size: rem(24);
+  line-height: lh(32);
+  @include heading;
+}
+@mixin h5 {
+  font-size: rem(20);
+  line-height: lh(28);
+  @include heading-semi-bold;
+}
+@mixin h6 {
+  font-size: rem(16);
+  line-height: lh(24);
+  @include heading-semi-bold;
+}
