@@ -1,0 +1,57 @@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = null;
+
+    var twoLetterISOLanguageName = System.Threading.Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName;
+}
+
+<!DOCTYPE html>
+<html lang="@twoLetterISOLanguageName">
+<head>
+    @Html.Partial("Hlaup/Structure/Meta")
+
+    @if (Html.IsLocal())
+    {
+        <!-- port is the same as in config/settings.js -->
+        <link href="http://localhost:8808/styles.css" rel="stylesheet" />
+    }
+    else
+    {
+        <link href="@VersionService.PathAndChecksum("/content/hlaup/css/styles.min.css")" rel="stylesheet" />
+    }
+</head>
+<body>
+    @Html.Partial("Hlaup/Scripts/ScriptsAfterBody")
+
+    @Html.Partial("Hlaup/Structure/MegaMenu")
+    @Html.Partial("Hlaup/Structure/Header")
+
+    <main>
+
+        <div id="content" class="container">
+
+            @RenderBody()
+
+        </div>
+
+    </main>
+
+    @Html.Partial("Hlaup/Structure/Footer")
+
+    @if (Html.IsLocal())
+    {
+        <!-- port is the same as in config/settings.js -->
+        <script type="text/javascript" src="http://localhost:8808/vendor.js"></script>
+        <script type="text/javascript" src="http://localhost:8808/js/main.js"></script>
+        <script type="text/javascript" src="http://localhost:8808/js/styles.js"></script>
+    }
+    else
+    {
+        <!-- Uncomment the vendor.min.js if importing node modules to js and code splitting starts. -->
+        <!-- <script type="text/javascript" src="@VersionService.PathAndChecksum("/content/hlaup/js/vendor.min.js")"></script> -->
+        <script type="text/javascript" src="@VersionService.PathAndChecksum("/content/hlaup/js/main.min.js")"></script>
+    }
+
+    @Html.Partial("Hlaup/Scripts/ScriptsFooter")
+</body>
+</html>
