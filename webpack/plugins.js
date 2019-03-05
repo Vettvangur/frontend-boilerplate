@@ -1,19 +1,25 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
+const paths = require('./paths');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+let cleanOptions = {
+  verbose:  true,
+  dry:      false,
+  allowExternal: true,
+}
 
 
 module.exports = ({ isProduction = false, isServer = false }) => {
   const productionPlugins = [
-    new CleanWebpackPlugin('build', {}),
+    new CleanWebpackPlugin(paths.build, cleanOptions),
   ]
   const developmentPlugins = [
-    new webpack.HotModuleReplacementPlugin({}),
   ];
   const plugins = [
     new MiniCssExtractPlugin({
-      filename: isProduction ? `css/[name].min.css` : `[name].css`,
-      chunkFilename: isProduction ? '[id].css' : '[name].css',
+      filename: isProduction ? `css/[name].min.css` : `css/[name].css`,
+      chunkFilename: isProduction ? 'css/[id].css' : 'css/[id].css',
     }),
   ]
   if (isProduction) {

@@ -1,0 +1,66 @@
+// MEDIA QUERY LABEL
+// =======================================
+
+body {
+	&.show__media-label {
+		&:after,
+		&:before {
+			content: "";
+			position: fixed;
+			bottom: 0;
+			padding: rem(4) rem(10);
+			font-size: rem(10);
+			z-index: 9999;
+			text-transform: uppercase;
+			color: #fff;
+		}
+		
+		&:after {
+			right: 0;
+
+			content: "Phone XS";
+			background: violet;
+			color: #fff;
+
+			@include mqOnly(phone-sm) {
+				content: "Phone SM";
+				background: #ffeb3b;
+				color: #000;
+			}
+			@include mqOnly(phone-md) {
+				content: "Phone MD";
+				background: #5677fc;
+				color: #fff;
+			}
+			@include mqOnly(tablet) {
+				content: "Tablet";
+				background: #009688;
+			}
+			@include mqOnly(desktop-sm) {
+				content: "Desktop SM";
+				background: #ff9800;
+			}
+			@include mqOnly(desktop-lg) {
+				content: "Desktop LG";
+				background: #e51c23;
+			}
+			@include mqOnly(desktop-xl) {
+				content: "Desktop XL";
+				background: #9c27b0;
+			}
+			@include mqOnly(desktop-xxl) {
+				content: "Desktop XXL";
+				background: #1abc9c;
+			}
+			@include mqOnly(desktop-xxxl) {
+				content: "Desktop XXXL";
+				background: #34495e;
+			}
+
+			@include mqOnly(desktop-xxxxl) {
+				content: "Desktop XXXXL";
+				background: brown;
+			} 
+		}
+	}
+} // END MEDIA QUERY LABEL

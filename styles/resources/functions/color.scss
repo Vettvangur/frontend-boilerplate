@@ -1,0 +1,9 @@
+@function color($map, $key, $alpha: 1) {
+  $color: map-get($map, $key);
+  @if $alpha == 1  {
+    @return $color;
+  }
+  @else {
+    @return $color;
+  }
+}

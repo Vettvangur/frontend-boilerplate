@@ -1,11 +1,12 @@
 const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const { isProduction, isDebug } = require('../config/app');
 
 module.exports = ({
   isProduction = false,
   isServer = false
 }) => {
-  const Optimization = {
+  return {
     minimizer: [
       new TerserPlugin({
         cache: isProduction ? false : true,
@@ -17,18 +18,5 @@ module.exports = ({
       }),
       new OptimizeCSSAssetsPlugin({}),
     ],
-    splitChunks: {
-      cacheGroups: {
-        default: false,
-        vendors: false,
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendor',
-          filename: isProduction ? 'vendor.min.js' : 'vendor.js',
-          chunks: 'all',
-        },
-      },
-    }
   }
-  return Optimization;
 }

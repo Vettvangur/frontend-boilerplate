@@ -7,9 +7,9 @@ module.exports = ({
   isProduction = false,
   isServer = false
 }) => {
-  const js = {
+  const javascript = {
     test: /\.m?js$/,
-    exclude: paths.modules,
+    exclude: /node_modules/,
     use: [{
       loader: 'babel-loader',
       options: {
@@ -22,7 +22,7 @@ module.exports = ({
     test: /\.s?css$/,
     exclude: /node_modules/,
     use: [
-      ...(!isProduction ? ['css-hot-loader'] : []),
+      ...(isProduction ? ['css-hot-loader'] : []),
       MiniCssExtractPlugin.loader,
       {
         loader: 'css-loader',
@@ -45,15 +45,30 @@ module.exports = ({
         loader: 'sass-loader',
         options: {
           includePaths: [
-            path.resolve(__dirname, 'node_modules/foundation-sites/scss'),
+            path.resolve(__dirname, 'styles/base/**/*.scss'),
+            //path.resolve(__dirname, 'node_modules/foundation-sites/scss'), for foundation
           ]
+        },
+      },
+      {
+        loader: '@epegzz/sass-vars-loader',
+        options: {
+          syntax: 'scss',
+          files: [
+            path.resolve(__dirname, '../styles/resources/colors.js'),
+            path.resolve(__dirname, '../styles/resources/media-breakpoints.js')
+          ],
         },
       },
       {
         // Imports resources into all SCSS files.
         loader: 'sass-resources-loader',
         options: {
-          resources: path.resolve(__dirname, './../styles/resources/**/*.scss')
+          resources: [
+            path.resolve(__dirname, './../styles/resources/functions/*.scss'),
+            path.resolve(__dirname, './../styles/resources/mixins/*.scss'),
+            path.resolve(__dirname, './../styles/resources/helpers/*.scss'),
+          ]
         },
       },
     ],
@@ -96,5 +111,5 @@ module.exports = ({
     }
   ]
 
-  return [js, scss, ...fonts];
+  return [javascript, scss, ...fonts];
 }

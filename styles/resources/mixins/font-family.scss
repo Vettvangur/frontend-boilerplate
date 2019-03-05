@@ -1,0 +1,13 @@
+// FONT FAMILY MIXIN
+// =======================================
+
+@mixin font-family(
+	$Family, 
+	$Weight: font-weight(regular)
+) {
+	font-family: $Family;
+
+	@if $Weight {
+		font-weight: $Weight;
+	} 
+}

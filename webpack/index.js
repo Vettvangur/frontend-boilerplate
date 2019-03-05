@@ -5,12 +5,18 @@ const plugins = require('./plugins');
 const resolve = require('./resolve');
 const rules = require('./rules');
 
-module.exports = (env = { production: false, server: false, }) => {
+
+module.exports = (env = {
+  production: false,
+  server: false,
+}) => {
   const isProduction = env && env.production;
   const isServer = env && env.server;
 
-  const config = { isProduction, isServer };
-
+  const config = {
+    isProduction,
+    isServer
+  };
   return {
     entry: isProduction ? {
       main: '../src/index.js',
@@ -35,11 +41,13 @@ module.exports = (env = { production: false, server: false, }) => {
 
     mode: isProduction ? 'production' : 'development',
 
-    module: { rules: rules(config), },
+    module: {
+      rules: rules(config),
+    },
 
     plugins: plugins(config),
-    
-    optimization: optimize(config) ,
+
+    optimization: optimize(config),
 
     resolve,
 

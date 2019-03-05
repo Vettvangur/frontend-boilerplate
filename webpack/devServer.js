@@ -1,10 +1,12 @@
 const paths = require('./paths');
-const settings = require('../config/settings')
+const {
+  port
+} = require('../config/app');
 
 module.exports = {
-  contentBase: paths.assets,
-  compress: settings.minifyDevelopment,
-  port: settings.port,
+  contentBase: paths.devServerContent,
+  compress: false,
+  port: port,
   open: false,
   headers: {
     'Access-Control-Allow-Origin': '*'
