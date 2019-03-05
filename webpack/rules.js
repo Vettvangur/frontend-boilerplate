@@ -86,7 +86,7 @@ module.exports = ({
             if (isProduction) {
               return paths.public + url;
             }
-            return url;
+            return '/assets/' + url;
           },
         },
       }],
@@ -104,7 +104,7 @@ module.exports = ({
             if (isProduction) {
               return paths.public + url;
             }
-            return url;
+            return '/assets/' + url;
           },
         },
       }],
