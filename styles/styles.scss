@@ -1,7 +1,8 @@
-@import 'base';
-@import 'layout';
-@import 'page';
-@import 'components';
+@import 'resources/helpers/*';
+@import 'base/*';
+@import 'layout/*';
+@import 'page/*';
+@import 'components/*';
 body {
   background-color: color($lightTheme, color);
 }

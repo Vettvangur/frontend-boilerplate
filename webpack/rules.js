@@ -1,4 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const globImporter = require('node-sass-glob-importer');
 const paths = require('./paths');
 const path = require('path');
 
@@ -44,6 +45,7 @@ module.exports = ({
       {
         loader: 'sass-loader',
         options: {
+          importer: globImporter(),
           includePaths: [
             path.resolve(__dirname, 'styles/base/**/*.scss'),
             //path.resolve(__dirname, 'node_modules/foundation-sites/scss'), for foundation
@@ -65,9 +67,8 @@ module.exports = ({
         loader: 'sass-resources-loader',
         options: {
           resources: [
-            path.resolve(__dirname, './../styles/resources/functions/*.scss'),
-            path.resolve(__dirname, './../styles/resources/mixins/*.scss'),
-            path.resolve(__dirname, './../styles/resources/helpers/*.scss'),
+            path.resolve(__dirname, '../styles/resources/functions/*.scss'),
+            path.resolve(__dirname, '../styles/resources/mixins/*.scss'),
           ]
         },
       },
