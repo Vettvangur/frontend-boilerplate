@@ -1,4 +1,4 @@
-# Hlaup
+# Vanilla boilerplate
 
 # Structure
 
