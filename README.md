@@ -1,11 +1,5 @@
 # Vanilla boilerplate
 
-# Structure
-
-* Umbraco.Extensions
-* Umbraco.Frondend
-* Umbraco.Site
-
 # Install
 
 First install ``node_modules`` with ``yarn install``
