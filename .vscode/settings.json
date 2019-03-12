@@ -1,14 +1,14 @@
 {
   "typescript.tsdk": "node_modules\\typescript\\lib",
-  // "files.exclude": {
-  //   "node_modules": true,
-  //   ".gitignore": true,
-  //   "README.md": true,
-  //   "yarn.lock": true,
-  //   ".vscode": true,
-  //   "tsconfig.json": true,
-  //   "webpack": true,
-  //   "examples": true,
-  //   "config": true,
-  // },
+  "files.exclude": {
+    "node_modules": true,
+    // ".gitignore": true,
+    "README.md": true,
+    // "yarn.lock": true,
+    // ".vscode": true,
+    // "tsconfig.json": true,
+    // "webpack": true,
+    // "examples": true,
+    // "config": true,
+  },
 }

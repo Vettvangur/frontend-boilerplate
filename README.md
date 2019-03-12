@@ -1,10 +1,4 @@
-# Hlaup
-
-# Structure
-
-* Umbraco.Extensions
-* Umbraco.Frondend
-* Umbraco.Site
+# Vanilla boilerplate
 
 # Install
 
