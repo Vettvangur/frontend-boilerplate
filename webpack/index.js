@@ -8,22 +8,22 @@ const rules = require('./rules');
 
 module.exports = (env = {
   production: false,
-  server: false,
+  server: false
 }) => {
   const isProduction = env && env.production;
   const isServer = env && env.server;
 
   const config = {
     isProduction,
-    isServer
+    isServer,
   };
   return {
     entry: isProduction ? {
-      main: '../src/index.js',
+      main: '../src/index.ts',
       styles: '../styles/styles.scss'
     } : {
-      main: '../src/index.js',
-      styles: '../styles/styles.js'
+      main: '../src/index.ts',
+      styles: '../styles/styles.ts'
     },
 
     output: {

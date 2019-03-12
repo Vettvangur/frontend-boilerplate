@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "outDir": "build",
+    "forceConsistentCasingInFileNames": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "baseUrl": "./",
+    "module": "commonjs",
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "rootDir": "../",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "preserveSymlinks": false,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "paths": {
+      "helpers/*": [
+        "src/utils/*"
+      ],
+      "components/*": [
+        "src/components/*"
+      ],
+      "interfaces/*": [
+        "src/interfaces/*"
+      ]
+    },
+  },
+  "exclude": ["node_modules", "build", "scripts", "webpack"],
+  "typeRoots": ["node_modules/@types"]
+}

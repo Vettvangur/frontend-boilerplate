@@ -8,11 +8,8 @@
     "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
     "@epegzz/sass-vars-loader": "4.0.0",
-    "babel-loader": "^8.0.5",
+    "awesome-typescript-loader": "^5.2.1",
     "clean-webpack-plugin": "^1.0.1",
     "css-hot-loader": "^1.4.3",
     "css-loader": "^2.1.0",
@@ -29,6 +26,7 @@
     "sass-resources-loader": "^2.0.0",
     "style-loader": "^0.23.1",
     "terser-webpack-plugin": "^1.2.2",
+    "typescript": "^3.3.3333",
     "url-loader": "^1.1.2",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",

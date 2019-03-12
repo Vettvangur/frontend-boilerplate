@@ -8,22 +8,19 @@ module.exports = ({
   isProduction = false,
   isServer = false
 }) => {
-  const javascript = {
-    test: /\.m?js$/,
+  const typescript = {
+    test: /\.(js|jsx|ts|tsx)$/,
+    test: /\.m?ts$/,
     exclude: /node_modules/,
     use: [{
-      loader: 'babel-loader',
-      options: {
-        presets: ['@babel/preset-env'],
-        plugins: [],
-      }
+      loader: 'awesome-typescript-loader',
     }, ],
   };
   const scss = {
     test: /\.s?css$/,
     exclude: /node_modules/,
     use: [
-      ...(isProduction ? ['css-hot-loader'] : []),
+      ...(!isProduction ? ['css-hot-loader'] : []),
       MiniCssExtractPlugin.loader,
       {
         loader: 'css-loader',
@@ -112,5 +109,5 @@ module.exports = ({
     }
   ]
 
-  return [javascript, scss, ...fonts];
+  return [typescript, scss, ...fonts];
 }

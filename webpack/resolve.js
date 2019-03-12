@@ -3,6 +3,9 @@ const paths = require('./paths');
 module.exports = {
   extensions: [
     '.js',
+    '.jsx',
+    '.ts',
+    '.tsx',
   ],
 
   modules: [
