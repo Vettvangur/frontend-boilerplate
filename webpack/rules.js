@@ -14,7 +14,7 @@ module.exports = ({
     exclude: /node_modules/,
     use: [{
       loader: 'awesome-typescript-loader',
-    }, ],
+    },],
   };
   const scss = {
     test: /\.s?css$/,
@@ -28,7 +28,7 @@ module.exports = ({
           importLoaders: 1,
           modules: false,
           // localIdentName: isProduction ? '[name]__[local]--[hash:base64:5]' : '[name]__[local]',
-          sourceMap: isProduction ? false : true,
+          sourceMap: !isProduction,
         },
       },
       {
@@ -72,41 +72,41 @@ module.exports = ({
     ],
   };
   const fonts = [{
-      test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
-      use: [{
-        loader: require.resolve('url-loader'),
-        options: {
-          limit: 10000,
-          mimetype: 'application/font-woff',
-          name: 'fonts/[name].[ext]',
+    test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+    use: [{
+      loader: require.resolve('url-loader'),
+      options: {
+        limit: 10000,
+        mimetype: 'application/font-woff',
+        name: 'fonts/[name].[ext]',
 
-          publicPath: (url, resourcePath, context) => {
-            if (isProduction) {
-              return paths.public + url;
-            }
-            return '/assets/' + url;
-          },
+        publicPath: (url, resourcePath, context) => {
+          if (isProduction) {
+            return paths.public + url;
+          }
+          return '/assets/' + url;
         },
-      }],
-    },
-    {
-      test: /\.(ttf)(\?v=\d+\.\d+\.\d+)?$/,
-      use: [{
-        loader: require.resolve('url-loader'),
-        options: {
-          limit: 10000,
-          mimetype: 'application/font-ttf',
-          name: 'fonts/[name].[ext]',
+      },
+    }],
+  },
+  {
+    test: /\.(ttf)(\?v=\d+\.\d+\.\d+)?$/,
+    use: [{
+      loader: require.resolve('url-loader'),
+      options: {
+        limit: 10000,
+        mimetype: 'application/font-ttf',
+        name: 'fonts/[name].[ext]',
 
-          publicPath: (url, resourcePath, context) => {
-            if (isProduction) {
-              return paths.public + url;
-            }
-            return '/assets/' + url;
-          },
+        publicPath: (url, resourcePath, context) => {
+          if (isProduction) {
+            return paths.public + url;
+          }
+          return '/assets/' + url;
         },
-      }],
-    }
+      },
+    }],
+  }
   ]
 
   return [typescript, scss, ...fonts];

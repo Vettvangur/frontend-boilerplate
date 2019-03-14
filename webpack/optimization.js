@@ -4,17 +4,14 @@ const { isProduction, isDebug } = require('../config/app');
 
 module.exports = ({
   isProduction = false,
-  isServer = false
 }) => {
   return {
     minimizer: [
       new TerserPlugin({
-        cache: isProduction ? false : true,
-        terserOptions: {
-          
-        },
-        parallel: isProduction ? true : false,
-        sourceMap: isProduction ? false : true, // set to true if you want JS source maps
+        cache: !isProduction,
+        terserOptions: {},
+        parallel: isProduction,
+        sourceMap: !isProduction, // set to true if you want JS source maps
       }),
       new OptimizeCSSAssetsPlugin({}),
     ],

@@ -22,14 +22,14 @@ module.exports = (env = {
       main: '../src/index.ts',
       styles: '../styles/styles.scss'
     } : {
-      main: '../src/index.ts',
-      styles: '../styles/styles.ts'
-    },
+        main: '../src/index.ts',
+        styles: '../styles/styles.ts'
+      },
 
     output: {
       path: paths.build,
-      filename: isProduction ? 'js/[name].min.js' : 'js/[name].js',
-      chunkFilename: isProduction ? 'js/[name].[chunkhash:6].js' : 'js/[name].js',
+      filename: isProduction ? '[name].min.js' : '[name].js',
+      chunkFilename: isProduction ? '[name].[chunkhash:6].js' : '[name].js',
       publicPath: isProduction ? paths.public : paths.localhost,
     },
 

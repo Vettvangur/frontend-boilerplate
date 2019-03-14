@@ -8,4 +8,7 @@ module.exports = {
   isClient: typeof window !== 'undefined',
   isTypescript: false,
   apiEndpoint: '',
+
+  // Relative to the frontend root. Common path is ../Umbraco.Site/build.
+  buildFolder: 'build',
 }

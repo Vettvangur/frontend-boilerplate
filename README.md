@@ -1,25 +1,40 @@
-# Vanilla boilerplate
+# Front-end boilerplate
 
-# Install
+## When start a new project.
 
-First install ``node_modules`` with ``yarn install``
+* Set all setting in `config/app.js`.
 
-Then to run dev mode for front end
+## Install dependencies
 
-Run ``yarn start`` or ``yarn dev`` 
+```bash
+npm i
+```
 
-### Build commands:
-``yarn build``
+## Scripts
+```bash
+## Build bundles for development.
+npm start
 
-to build the project run ``yarn build``
+## or
+npm run dev
+```
+```bash
+## Build production build.
+npm run build
+```
+```bash
+## Remove node_modules and install them agin.
+npm run clean
 
+## Remove node_modules, package-lock.json and clean npm cash.
+npm run clean:cache
+```
 
-
-# Styles folder
+## Styles folder
 
 Resources are imported with webpack so then can be used in every folder.
 
-## resources
+### resources
 
 We've got functions, helpers and mixins in folders in the `styles/resources` folder there we've got a nice heap of things.
 
@@ -39,32 +54,28 @@ h1 {
 }
 ```
 
-# Configuration
+## Configuration
 
-## Config folder
+### Config folder
 
-### app.js 
+#### app.js 
 * appName (can also be added in the build script in package.json with env.name=vettvangur
 * port (can be set with env.port but defaults to 8809
 
-### postcss.config.js
+#### postcss.config.js
 This is a config file for css browser compatability.
 
 
 
-## webpack folder
+### Webpack folder
 
-### devServer.js
-Don't touch this file.
+#### index.js
+This is the root webpack file.
 
-### index.js
-Don't touch this file unless to add entries.
-
-
-### optimization.js
+#### optimization.js
 js and css optimization.
 
-### paths.js
+#### paths.js
 
 configure paths here like if you want to do `import from 'components/button';`
 
@@ -73,17 +84,13 @@ public path is always `/content/appName/` appName is set in app.js in config fol
 `devServerContent`: is always the public folder in `Umbraco.Frontend`
 `build`: is always `Umbraco.Frontend/build` or that is the current directory yarn build is run from.
 
-
 some stuff in there is currently useless like root, assets and will be removed.
 
-### plugins.js
+#### plugins.js
 
 This file is for plugin configuration like CleanWebpackPlugin MiniCssExtractPlugin and other things you might want it has one array of plugins for production and another for development and one that is for used in both and then they are concated into one based on env.
 
-### resolve.js
 
-Don't touch this file.
-
-### rules.js
+#### rules.js
 
 File for setting rules. this is setting how webpack should handle files like js, jsx, ts, tsx, svg, jpg, png, fonts etc...

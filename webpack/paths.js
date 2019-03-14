@@ -2,10 +2,9 @@ const path = require('path');
 const CURRENT_WORKING_DIR = process.cwd();
 
 const {
-  isProduction,
-  isDebug,
   port,
-  appName
+  appName,
+  buildFolder
 } = require('../config/app');
 
 module.exports = {
@@ -22,7 +21,6 @@ module.exports = {
   root: path.resolve(CURRENT_WORKING_DIR),
   app: path.resolve(CURRENT_WORKING_DIR, 'src'),
   configs: path.resolve(CURRENT_WORKING_DIR, 'config'),
-  build: path.resolve(CURRENT_WORKING_DIR, 'build'),
+  build: path.resolve(CURRENT_WORKING_DIR, buildFolder),
   modules: path.resolve(CURRENT_WORKING_DIR, 'node_modules'),
-
 };
