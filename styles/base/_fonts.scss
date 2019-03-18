@@ -1,22 +1,18 @@
-
-
 @font-face {
-  font-family: 'Inter';
-  font-style:  normal;
-  font-display: fallback;
+  font-family: Inter;
+  font-style: normal;
   font-weight: 400;
-  src: url("../public/assets/fonts/Inter-Regular.woff2") format("woff2"),
-       url("../public/assets/fonts/Inter-Regular.woff") format("woff");
+  font-display: fallback;
+  src:
+    url('../public/assets/fonts/Inter-Regular.woff2') format('woff2'),
+    url('../public/assets/fonts/Inter-Regular.woff') format('woff');
 }
 @font-face {
-  font-family: 'Inter';
-  font-style:  normal;
+  font-family: Inter;
+  font-style: normal;
   font-display: fallback;
   font-weight: 500;
-  src: url("../public/assets/fonts/Inter-Medium.woff2") format("woff2"),
-       url("../public/assets/fonts/Inter-Medium.woff") format("woff");
-}
-
-.ha {
-  font-family: 'inter'
+  src:
+    url('../public/assets/fonts/Inter-Medium.woff2') format('woff2'),
+    url('../public/assets/fonts/Inter-Medium.woff') format('woff');
 }
