@@ -1,26 +1,26 @@
 // MEDIA QUERIES
 // =======================================
 
-@function breakpoint-next($name, $breakpoints: $mediaBreakpoints, $breakpoint-names: map-keys($breakpoints)) {
+@function breakpoint-next($name, $breakpoints: $breakpoints, $breakpoint-names: map-keys($breakpoints)) {
   $n: index($breakpoint-names, $name);
   @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
 }
 
-@function breakpoint-min($name, $breakpoints: $mediaBreakpoints) {
+@function breakpoint-min($name, $breakpoints: $breakpoints) {
   $min: map-get($breakpoints, $name);
   @return if($min != 0, $min, null);
 }
 
-@function breakpoint-max($name, $breakpoints: $mediaBreakpoints) {
+@function breakpoint-max($name, $breakpoints: $breakpoints) {
   $next: breakpoint-next($name, $breakpoints);
   @return if($next, breakpoint-min($next, $breakpoints) - .02px, null);
 }
 
-@function breakpoint-infix($name, $breakpoints: $mediaBreakpoints) {
+@function breakpoint-infix($name, $breakpoints: $breakpoints) {
   @return if(breakpoint-min($name, $breakpoints) == null, '', '-#{$name}');
 }
 
-@mixin mqUp($name, $breakpoints: $mediaBreakpoints) {
+@mixin mqUp($name, $breakpoints: $breakpoints) {
   $min: breakpoint-min($name, $breakpoints);
   @if $min {
     @media (min-width: $min) {
@@ -32,7 +32,7 @@
   }
 }
 
-@mixin mqDown($name, $breakpoints: $mediaBreakpoints) {
+@mixin mqDown($name, $breakpoints: $breakpoints) {
   $max: breakpoint-max($name, $breakpoints);
   @if $max {
     /* stylelint-disable-next-line */
@@ -45,7 +45,7 @@
   }
 }
 
-@mixin mqBetween($lower, $upper, $breakpoints: $mediaBreakpoints) {
+@mixin mqBetween($lower, $upper, $breakpoints: $breakpoints) {
   $min: breakpoint-min($lower, $breakpoints);
   $max: breakpoint-max($upper, $breakpoints);
 
@@ -67,7 +67,7 @@
   }
 }
 
-@mixin mqOnly($name, $breakpoints: $mediaBreakpoints) {
+@mixin mqOnly($name, $breakpoints: $breakpoints) {
   $min: breakpoint-min($name, $breakpoints);
   $max: breakpoint-max($name, $breakpoints);
 
