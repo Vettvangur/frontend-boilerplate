@@ -31,7 +31,7 @@
     "sass-resources-loader": "^2.0.0",
     "style-loader": "^0.23.1",
     "stylelint": "^9.10.1",
-    "stylelint-config-primer": "^5.0.0",
+    "stylelint-config-primer": "^6.0.0",
     "stylelint-order": "^2.1.0",
     "terser-webpack-plugin": "^1.2.2",
     "typescript": "^3.3.3333",
