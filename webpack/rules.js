@@ -10,7 +10,6 @@ module.exports = ({
 }) => {
   const typescript = {
     test: /\.(js|jsx|ts|tsx)$/,
-    test: /\.m?ts$/,
     exclude: /node_modules/,
     use: [{
       loader: 'awesome-typescript-loader',
@@ -43,27 +42,33 @@ module.exports = ({
         loader: 'sass-loader',
         options: {
           importer: globImporter(),
-          includePaths: [
-            path.resolve(__dirname, 'styles/base/**/*.scss'),
-            //path.resolve(__dirname, 'node_modules/foundation-sites/scss'), for foundation
-          ]
+          // includePaths: [
+          //   path.resolve(__dirname, 'node_modules/foundation-sites/scss'), for foundation
+          // ]
         },
       },
-      {
-        loader: '@epegzz/sass-vars-loader',
-        options: {
-          syntax: 'scss',
-          files: [
-            path.resolve(__dirname, '../styles/resources/colors.js'),
-            path.resolve(__dirname, '../styles/resources/media-breakpoints.js')
-          ],
-        },
-      },
+      /**
+       * Loader: @epegzz/sass-vars-loader
+       * Use case: when you use scss or css inside javascript or typescript.
+       * 
+       */
+
+      // {
+      //   loader: '@epegzz/sass-vars-loader',
+      //   options: {
+      //     syntax: 'scss',
+      //     files: [
+      //       path.resolve(__dirname, '../styles/resources/colors.js'),
+      //       path.resolve(__dirname, '../styles/resources/media-breakpoints.js')
+      //     ],
+      //   },
+      // },
       {
         // Imports resources into all SCSS files.
         loader: 'sass-resources-loader',
         options: {
           resources: [
+            path.resolve(__dirname, '../styles/resources/variables/*.scss'),
             path.resolve(__dirname, '../styles/resources/functions/*.scss'),
             path.resolve(__dirname, '../styles/resources/mixins/*.scss'),
           ]
@@ -78,13 +83,13 @@ module.exports = ({
       options: {
         limit: 10000,
         mimetype: 'application/font-woff',
-        name: 'fonts/[name].[ext]',
+        name: '[name].[ext]',
 
         publicPath: (url, resourcePath, context) => {
           if (isProduction) {
             return paths.public + url;
           }
-          return '/assets/' + url;
+          return `/${url}`
         },
       },
     }],
@@ -96,13 +101,13 @@ module.exports = ({
       options: {
         limit: 10000,
         mimetype: 'application/font-ttf',
-        name: 'fonts/[name].[ext]',
+        name: '[name].[ext]',
 
         publicPath: (url, resourcePath, context) => {
           if (isProduction) {
             return paths.public + url;
           }
-          return '/assets/' + url;
+          return `/${url}`
         },
       },
     }],

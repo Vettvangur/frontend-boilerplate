@@ -4,11 +4,12 @@ const CURRENT_WORKING_DIR = process.cwd();
 const {
   port,
   appName,
-  buildFolder
+  buildFolder,
+  absolutePublicPath
 } = require('../config/app');
 
 module.exports = {
-  public: `/content/${appName}/`,
+  public: absolutePublicPath,
   localhost: `http://localhost:${port}/`,
   devServerContent: path.resolve(CURRENT_WORKING_DIR, 'public'),
 

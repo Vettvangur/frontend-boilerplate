@@ -7,12 +7,11 @@
 @import 'components/*';
 
 body {
-  background-color: color($lightTheme, color);
+  background-color: color($colors, sky);
 }
 
 h1 {
   font-size: 48px;
-  color: color($mainColors, primary);
-  @include font-family('Inter');
+  color: color($colors, sexy);
   font-family: Inter, 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 }

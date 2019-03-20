@@ -1,3 +1,4 @@
+import './polyfills';
 import Car from 'components/car'
 
 const theBMobile = new Car();
