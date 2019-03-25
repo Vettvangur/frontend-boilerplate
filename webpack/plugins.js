@@ -3,16 +3,11 @@ const webpack = require('webpack');
 const paths = require('./paths');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-let cleanOptions = {
-  verbose:  true,
-  dry:      false,
-  allowExternal: true,
-}
-
-
 module.exports = ({ isProduction = false, isServer = false }) => {
   const productionPlugins = [
-    new CleanWebpackPlugin(paths.build, cleanOptions),
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: [paths.build]
+    }),
   ]
   const developmentPlugins = [
   ];

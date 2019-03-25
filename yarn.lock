@@ -122,6 +122,10 @@
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
 
+"@primer/css@^12.2.1":
+  version "12.2.1"
+  resolved "https://registry.yarnpkg.com/@primer/css/-/css-12.2.1.tgz#badbb9e5e9dee1eb739da5595a4a418205854b49"
+
 "@types/events@*":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
@@ -1055,7 +1059,6 @@ class-utils@^0.3.5:
 clean-webpack-plugin@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/clean-webpack-plugin/-/clean-webpack-plugin-2.0.1.tgz#2241526b0030aa0249e78714471298f867fc2829"
-  integrity sha512-vway5pXGVd91bicwjaf8j188Al6VMf9R9Ekl6q0qeiaWStRsOOXuh4qtjX1UrUvmz5XevQVCdjBuzr4Tzsnpog==
   dependencies:
     del "^4.0.0"
 
@@ -1715,7 +1718,6 @@ del@^3.0.0:
 del@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/del/-/del-4.0.0.tgz#4fa27e92c366cb45b9bdaa56a9b8703dced17437"
-  integrity sha512-/BnSJ+SuZyLu7xMn48kZY0nMXDi+5KNmR4g8n21Wivsl8+B9njV6/5kcTNE9juSprp0zRWBU28JuHUq0FqK1Nw==
   dependencies:
     globby "^6.1.0"
     is-path-cwd "^2.0.0"
@@ -2113,7 +2115,7 @@ eslint-visitor-keys@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
 
-eslint@^5.15.1:
+eslint@^5.15.3:
   version "5.15.3"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.15.3.tgz#c79c3909dc8a7fa3714fb340c11e30fd2526b8b5"
   dependencies:
@@ -3402,7 +3404,6 @@ is-path-cwd@^1.0.0:
 is-path-cwd@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/is-path-cwd/-/is-path-cwd-2.0.0.tgz#d4777a8e227a00096a31f030db3770f84b116c02"
-  integrity sha512-m5dHHzpOXEiv18JEORttBO64UgTEypx99vCxQLjbBvGhOJxnTNglYoFXxwo6AbsQb79sqqycQEHv2hWkHZAijA==
 
 is-path-in-cwd@^1.0.0:
   version "1.0.1"
@@ -3413,7 +3414,6 @@ is-path-in-cwd@^1.0.0:
 is-path-in-cwd@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/is-path-in-cwd/-/is-path-in-cwd-2.0.0.tgz#68e452a6eec260500cec21e029c0a44cc0dcd2ea"
-  integrity sha512-6Vz5Gc9s/sDA3JBVu0FzWufm8xaBsqy1zn8Q6gmvGP6nSDMw78aS4poBNeatWjaRpTpxxLn1WOndAiOlk+qY8A==
   dependencies:
     is-path-inside "^1.0.0"
 
@@ -4311,7 +4311,7 @@ node-releases@^1.1.11:
   dependencies:
     semver "^5.3.0"
 
-node-sass-glob-importer@^5.3.0:
+node-sass-glob-importer@^5.3.1:
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/node-sass-glob-importer/-/node-sass-glob-importer-5.3.1.tgz#41affb02e8168d814610f1dc73f989f7c7fef03d"
   dependencies:
@@ -4685,7 +4685,6 @@ p-map@^1.1.1:
 p-map@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/p-map/-/p-map-2.0.0.tgz#be18c5a5adeb8e156460651421aceca56c213a50"
-  integrity sha512-GO107XdrSUmtHxVoi60qc9tUl/KkNKm+X2CF4P9amalpGxv5YqVPJNfSb0wcA+syCopkZvYYIzW8OVTQW59x/w==
 
 p-try@^1.0.0:
   version "1.0.0"
@@ -6690,14 +6689,14 @@ stylehacks@^4.0.0:
     postcss "^7.0.0"
     postcss-selector-parser "^3.0.0"
 
-stylelint-config-primer@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-primer/-/stylelint-config-primer-5.0.0.tgz#e0122a320d414b2534c82fc28897442c3dfb6b3c"
+stylelint-config-primer@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-primer/-/stylelint-config-primer-6.0.0.tgz#667b443936c2f2705a0827463003a634b583c799"
   dependencies:
     stylelint-no-unsupported-browser-features "^1.0.0"
     stylelint-order "^2.0.0"
     stylelint-scss "3.5.2"
-    stylelint-selector-no-utility "3.0.1"
+    stylelint-selector-no-utility "4.0.0"
 
 stylelint-no-unsupported-browser-features@^1.0.0:
   version "1.0.1"
@@ -6726,9 +6725,9 @@ stylelint-scss@3.5.2:
     postcss-selector-parser "^5.0.0"
     postcss-value-parser "^3.3.1"
 
-stylelint-selector-no-utility@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/stylelint-selector-no-utility/-/stylelint-selector-no-utility-3.0.1.tgz#4fc80ee6b226ccafcfa4cb79f72312b82366fdab"
+stylelint-selector-no-utility@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-selector-no-utility/-/stylelint-selector-no-utility-4.0.0.tgz#cc1f20132c8d08c7cbf5e5b297e8db4fdc25f03b"
   dependencies:
     stylelint "^7.13.0"
 
@@ -7117,7 +7116,6 @@ typedarray@^0.0.6:
 typescript@^3.3.4000:
   version "3.3.4000"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.3.4000.tgz#76b0f89cfdbf97827e1112d64f283f1151d6adf0"
-  integrity sha512-jjOcCZvpkl2+z7JFn0yBOoLQyLoIkNZAs/fYJkUG6VKy6zLPHJGfQJYFHzibB6GJaF/8QrcECtlQ5cpvRHSMEA==
 
 unherit@^1.0.4:
   version "1.1.1"
@@ -7365,7 +7363,6 @@ wbuf@^1.1.0, wbuf@^1.7.3:
 webpack-cli@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/webpack-cli/-/webpack-cli-3.3.0.tgz#55c8a74cae1e88117f9dda3a801c7272e93ca318"
-  integrity sha512-t1M7G4z5FhHKJ92WRKwZ1rtvi7rHc0NZoZRbSkol0YKl4HvcC8+DsmGDmK7MmZxHSAetHagiOsjOB6MmzC2TUw==
   dependencies:
     chalk "^2.4.1"
     cross-spawn "^6.0.5"
