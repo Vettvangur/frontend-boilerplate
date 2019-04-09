@@ -6707,9 +6707,9 @@ stylelint-no-unsupported-browser-features@^1.0.0:
     postcss "^6.0.1"
     stylelint ">=5.0.0"
 
-stylelint-order@^2.0.0, stylelint-order@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/stylelint-order/-/stylelint-order-2.1.0.tgz#fc64625c26b93755773bd67c1203381194aded04"
+stylelint-order@^2.0.0, stylelint-order@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/stylelint-order/-/stylelint-order-2.2.0.tgz#3208ac76529b35282871a7429075de5b8386fcae"
   dependencies:
     lodash "^4.17.10"
     postcss "^7.0.2"
