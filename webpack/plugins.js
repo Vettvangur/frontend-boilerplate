@@ -18,8 +18,8 @@ module.exports = ({ isProduction = false, isServer = false }) => {
   ];
   const plugins = [
     new MiniCssExtractPlugin({
-      filename: isProduction ? `css/[name].min.css` : `css/[name].css`,
-      chunkFilename: isProduction ? 'css/[id].css' : 'css/[id].css',
+      filename: isProduction ? `[name].min.css` : `[name].css`,
+      chunkFilename: isProduction ? '[id].css' : '[id].css',
     }),
   ]
   if (isProduction) {

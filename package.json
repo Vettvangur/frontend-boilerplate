@@ -10,10 +10,12 @@
   "devDependencies": {
     "@epegzz/sass-vars-loader": "4.3.1",
     "awesome-typescript-loader": "^5.2.1",
+    "babel-polyfill": "^6.26.0",
     "clean-webpack-plugin": "^1.0.1",
     "css-hot-loader": "^1.4.3",
     "css-loader": "^2.1.1",
     "cssnano": "^4.1.10",
+    "es6-promise": "^4.2.6",
     "eslint": "^5.15.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.16.0",

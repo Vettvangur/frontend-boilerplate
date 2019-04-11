@@ -5,9 +5,13 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "baseUrl": "./",
-    "module": "commonjs",
     "target": "es5",
-    "lib": ["es6", "dom"],
+    "module": "esnext",
+    "lib": [
+        "dom",
+        "es5",
+        "es2015.promise"
+    ],
     "sourceMap": true,
     "allowJs": true,
     "jsx": "react",
@@ -18,6 +22,7 @@
     "preserveSymlinks": false,
     "strictNullChecks": false,
     "noImplicitAny": false,
+    "importHelpers": true,
     "paths": {
       "helpers/*": [
         "src/utils/*"
