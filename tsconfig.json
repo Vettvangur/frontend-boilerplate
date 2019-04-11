@@ -1,28 +1,28 @@
 {
   "compilerOptions": {
-    "outDir": "build",
-    "forceConsistentCasingInFileNames": false,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
+    "allowJs": true,
+    "jsx": "react",
     "baseUrl": "./",
     "target": "es5",
     "module": "esnext",
     "lib": [
-        "dom",
-        "es5",
-        "es2015.promise"
+      "dom",
+      "es5",
+      "es2015.promise"
     ],
-    "sourceMap": true,
-    "allowJs": true,
-    "jsx": "react",
+    "forceConsistentCasingInFileNames": false,
+    "importHelpers": true,
     "moduleResolution": "node",
-    "rootDir": "../",
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "preserveSymlinks": false,
+    "sourceMap": true,
+    "suppressImplicitAnyIndexErrors": true,
     "strictNullChecks": false,
-    "noImplicitAny": false,
-    "importHelpers": true,
+    "outDir": "build",
+    "rootDir": "../",
     "paths": {
       "helpers/*": [
         "src/utils/*"

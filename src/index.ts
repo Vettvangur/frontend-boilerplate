@@ -3,15 +3,11 @@ if ('fetch' in window) {
   loadApp();
 } else {
   console.log("Add fetch and promise polyfill")
-  require('es6-promise').polyfill();
-  import('whatwg-fetch');
+  require('es6-promise/auto');
+  import(/* webpackChunkName: "fetch" */ 'whatwg-fetch');
   loadApp();
 }
-
-
-
 function loadApp() {
-  
   const fillBabelPolyfill = () => new Promise((resolve) => {
     if (
       'startsWith' in String.prototype &&
@@ -20,12 +16,13 @@ function loadApp() {
       'assign' in Object &&
       'keys' in Object
     ) return resolve();
-
-
-    import('babel-polyfill').then(() => {
-      console.log("loaded babel-polyfill")
-      resolve();
-    })
+    import('core-js/es/string')
+    import('core-js/es/array/includes')
+    import('core-js/es/object')
+    // import(/* webpackChunkName: "babel-poly" */ 'babel-polyfill').then(() => {
+    //   console.log("loaded babel-polyfill")
+    //   resolve();
+    // })
   });
 
   return Promise.all([

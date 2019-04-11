@@ -1,13 +1,11 @@
-const { ENV } = require('./env');
-
 module.exports = {
-  port: process.env.port || 9000,
-  appName: process.env.name || 'frontend-boilerplate',
-  isProduction: ENV === 'production',
-  isDebug: ENV === 'development',
+  port: 9000,
   isClient: typeof window !== 'undefined',
-  isTypescript: false,
   apiEndpoint: '',
+
+  // Absolute path is a setting for webpack to rename paths in sass like font faces for production.
+  // Absolute path from root, Common path is /build/. Another use is cdn path.
+  absolutePublicPath: '/build/',
 
   // Relative to the frontend root. Common path is ../Umbraco.Site/build.
   buildFolder: 'build',
