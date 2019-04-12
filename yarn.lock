@@ -7745,10 +7745,10 @@ stylehacks@^4.0.0:
     postcss "^7.0.0"
     postcss-selector-parser "^3.0.0"
 
-stylelint-config-primer@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-primer/-/stylelint-config-primer-6.0.0.tgz#667b443936c2f2705a0827463003a634b583c799"
-  integrity sha512-sHTgPYNGWMDMq7BMEFLM+6K3M7f1la5saJEdQNPrhjWxhzvWt+r2OaHuKklkgeM6X6yK8+2+UWKKcuIGBCNjOA==
+stylelint-config-primer@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-primer/-/stylelint-config-primer-7.0.0.tgz#c9db6b9a908ae5be645dc1276c7af947e906f536"
+  integrity sha512-PpQTJK9WYEoPRIpQtshKeslcloxLwRWTrF+lLgWKxRNsD/J0xuW+ucykqHYeO5+fJALWgFS06MdKQD/eg0Iycw==
   dependencies:
     stylelint-no-unsupported-browser-features "^1.0.0"
     stylelint-order "^2.0.0"
