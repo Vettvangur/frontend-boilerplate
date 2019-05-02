@@ -6,7 +6,7 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "@primer/css": "^12.2.1",
+    "@primer/css": "^12.3.0",
     "awesome-typescript-loader": "^5.2.1",
     "babel-polyfill": "^6.26.0",
     "bluebird": "^3.5.4",
