@@ -45,7 +45,8 @@
   },
   "scripts": {
     "build": "webpack --config ./webpack --env.production",
-    "clean": "rm -rf node_modules && npm i",
+    "clean:mac": "rm -rf node_modules && npm i",
+		"clean:pc": "rd /s /q node_modules && npm i",
     "clean:cache": "rm -rf [package-lock.json] node_modules && npm cache clean -f && npm i",
     "dev": "webpack-dev-server --config ./webpack --inline --progress --hot",
     "start": "yarn dev"
