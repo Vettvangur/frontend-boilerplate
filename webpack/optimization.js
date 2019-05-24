@@ -9,7 +9,11 @@ module.exports = ({
     minimizer: [
       new TerserPlugin({
         cache: !isProduction,
-        terserOptions: {},
+        terserOptions: {
+           compress: {
+               drop_console: true,
+           },
+        },
         parallel: isProduction,
         sourceMap: !isProduction, // set to true if you want JS source maps
       }),
