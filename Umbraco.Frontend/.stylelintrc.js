@@ -22,6 +22,7 @@ module.exports = {
     'at-rule-blacklist': null,
     'no-missing-end-of-source-newline': null,
     "primer/selector-no-utility": null,
+    "color-hex-case": null,
     'order/properties-order': [
       [
         {
@@ -129,15 +130,16 @@ module.exports = {
           order: 'flexible',
           properties: [
             'border',
-            'border-top',
-            'border-right',
+            'border-bottom-left-radius',
+            'border-bottom-right-radius',
             'border-bottom',
+            'border-color',
             'border-left',
             'border-radius',
+            'border-right',
             'border-top-left-radius',
             'border-top-right-radius',
-            'border-bottom-right-radius',
-            'border-bottom-left-radius',
+            'border-top',
           ],
         },
 
@@ -154,18 +156,17 @@ module.exports = {
           order: 'flexible',
           properties: [
             'font',
-            'font-display',
             'font-family',
             'font-feature-settings',
             'font-kerning',
             'font-size',
             'font-stretch',
             'font-style',
+            'font-variant',
             'font-variant-caps',
             'font-variant-east-asian',
             'font-variant-ligatures',
             'font-variant-numeric',
-            'font-variant',
             'font-variation-settings',
             'font-weight',
             '-webkit-font-size-delta',

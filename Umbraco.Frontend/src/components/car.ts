@@ -1,4 +1,4 @@
-import { IDrivable } from 'interfaces/ICar';
+import { IDrivable } from 'types/ICar';
 
 class Car implements IDrivable {
   private _isRunning: boolean;
