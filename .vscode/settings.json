@@ -1,7 +1,8 @@
 {
-  "typescript.tsdk": "node_modules\\typescript\\lib",
-  "files.exclude": {
-    "node_modules": true,
-    "README.md": false,
-  },
+    "typescript.tsdk": "Umbraco.Frontend\\node_modules\\typescript\\lib",
+    "files.exclude": {
+        "node_modules": true,
+        "README.md": false,
+    },
+    "files.eol": "\r\n"
 }

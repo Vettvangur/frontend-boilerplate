@@ -1,6 +1,6 @@
 .DS_Store
 .cache
 .awcache
-bower_components
-node_modules
-build
+
+**/node_modules
+Umbraco.Site/build

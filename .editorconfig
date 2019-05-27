@@ -1,3 +1,5 @@
+# editorconfig.org
+
 # top-most EditorConfig file
 root = true
 
@@ -9,8 +11,5 @@ indent_size = 4
 indent_style = space
 insert_final_newline = true
 
-[*.{js,jsx,ts,tsx,css,scss,less,json,html,config}]
+[Umbraco.Frontend/**]
 indent_size = 2
-
-[*.{html,cshtml}]
-charset = utf-8-bom
