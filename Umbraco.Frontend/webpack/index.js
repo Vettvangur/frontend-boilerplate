@@ -19,11 +19,11 @@ module.exports = (env = {
   };
   return {
     entry: isProduction ? {
-      main: '../src/index.ts',
-      styles: '../styles/styles.scss'
+      main: './src/index.ts',
+      styles: './src/styles/styles.scss'
     } : {
-        main: '../src/index.ts',
-        styles: '../styles/styles.ts'
+        main: './src/index.ts',
+        styles: './src/styles/styles.ts'
       },
 
     output: {
@@ -33,7 +33,7 @@ module.exports = (env = {
       publicPath: isProduction ? paths.public : paths.localhost,
     },
 
-    context: paths.app,
+    // context: paths.app,
 
     devServer,
 
@@ -50,7 +50,6 @@ module.exports = (env = {
     optimization: optimize(config),
 
     resolve,
-
 
     watch: !isProduction,
   }

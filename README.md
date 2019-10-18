@@ -4,7 +4,7 @@
 
 * Set all setting in `config/app.js`.
 * Remove car example in `src/components` and can interface in `src/interfaces`
-* add paths for imports in `webpack/paths.js`. for example: `import x from 'components/x`
+* add paths for imports in `webpack/paths.js`. for example: `import x from 'components/x'`
 
 ## Install dependencies
 

@@ -1,18 +1,20 @@
+$path: '../../public/fonts';
+
 @font-face {
   font-family: Inter;
   font-style: normal;
   font-weight: 400;
   font-display: fallback;
   src:
-    url('../public/fonts/Inter-Regular.woff2') format('woff2'),
-    url('../public/fonts/Inter-Regular.woff') format('woff');
+    url('#{$path}/Inter-Regular.woff2') format('woff2'),
+    url('#{$path}/Inter-Regular.woff') format('woff');
 }
 @font-face {
   font-family: Inter;
   font-style: normal;
-  font-display: fallback;
   font-weight: 500;
+  font-display: fallback;
   src:
-    url('../public/fonts/Inter-Medium.woff2') format('woff2'),
-    url('../public/fonts/Inter-Medium.woff') format('woff');
+    url('#{$path}/Inter-Medium.woff2') format('woff2'),
+    url('#{$path}/Inter-Medium.woff') format('woff');
 }

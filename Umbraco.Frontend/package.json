@@ -44,11 +44,11 @@
     "whatwg-fetch": "^3.0.0"
   },
   "scripts": {
-    "build": "npx webpack --config ./webpack --env.production",
+    "build": "webpack --config ./webpack --env.production",
     "clean:mac": "rm -rf node_modules && npm i",
     "clean:pc": "rd /s /q node_modules && npm i",
     "clean:cache": "rm -rf [package-lock.json] node_modules && npm cache clean -f && npm i",
-    "dev": "npx webpack-dev-server --config ./webpack --inline --progress --hot",
+    "dev": "webpack-dev-server --config ./webpack --inline --progress --hot",
     "start": "npm run dev"
   }
 }
