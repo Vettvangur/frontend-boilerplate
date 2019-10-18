@@ -41,10 +41,9 @@ module.exports = ({
       {
         loader: 'sass-loader',
         options: {
-          importer: globImporter(),
-          // includePaths: [
-          //   path.resolve(__dirname, 'node_modules/foundation-sites/scss'), for foundation
-          // ]
+          sassOptions: {
+            importer: globImporter(),
+          }
         },
       },
       /**
