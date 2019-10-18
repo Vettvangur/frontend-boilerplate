@@ -1,0 +1,11 @@
+/* stylelint-disable selector-max-type */
+
+body {
+  background-color: color($colors, sky);
+}
+
+h1 {
+  font-size: 48px;
+  color: color($colors, sexy);
+  font-family: Inter, 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+}
