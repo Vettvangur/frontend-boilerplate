@@ -1,6 +1,5 @@
 module.exports = {
   port: 9000,
-  isClient: typeof window !== 'undefined',
   apiEndpoint: '',
 
   // Absolute path is a setting for webpack to rename paths in sass like font faces for production.
