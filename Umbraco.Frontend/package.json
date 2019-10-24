@@ -21,7 +21,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",
     "fast-async": "^6.3.8",
-    "fibers": "^4.0.1",
+    "fibers": "^4.0.2",
     "file-loader": "^4.2.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.11.0",
